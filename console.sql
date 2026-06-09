@@ -16,7 +16,7 @@ END;
 $$;
 
 CREATE TRIGGER trg_update_last_modified
-    AFTER INSERT OR UPDATE ON products
+    BEFORE INSERT OR UPDATE ON products
     FOR EACH ROW
     EXECUTE FUNCTION update_last_modified();
 
